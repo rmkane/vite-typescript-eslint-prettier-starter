@@ -6,10 +6,11 @@ module.exports = {
     jest: true,
   },
   extends: [
-    'airbnb',
-    'airbnb-typescript',
+    'airbnb-base',
+    'airbnb-typescript/base',
+    'prettier',
+    'plugin:@typescript-eslint/recommended',
     'plugin:import/typescript',
-    'plugin:prettier/recommended',
   ],
   overrides: [],
   parser: '@typescript-eslint/parser',
@@ -26,13 +27,5 @@ module.exports = {
   globals: {
     module: true,
   },
-  settings: {
-    /*
-     * Disable react version checking for eslint-plugin-react
-     * required by eslint-config-airbnb
-     */
-    react: {
-      version: '18.2.0',
-    },
-  },
+  settings: {},
 };
